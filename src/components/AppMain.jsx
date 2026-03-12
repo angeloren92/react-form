@@ -7,7 +7,7 @@ function AppMain({ recipes }) {
   const [error, setError] = useState(false)
 
   function removeItem(i) {
-    const changedList = newList.filter( (element, index) => index !== i)
+    const changedList = newList.filter((element, index) => index !== i)
     setNewList(changedList)
   }
 
@@ -44,6 +44,10 @@ function AppMain({ recipes }) {
                 </span>
               </li>
             ))
+            }
+            { newList.length === 0 && <li className="list-group-item d-flex justify-content-between align-items-center">
+              <h2 className="h4">NON CI SONO RICETTE</h2>
+            </li>
             }
           </ul>
         </div>
